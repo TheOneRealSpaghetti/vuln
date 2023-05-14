@@ -10,7 +10,15 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "rewrites": [{
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/transactionsPage",
+      "destination": "/transactionsPage.html"
+    }]
   },
   "emulators": {
     "singleProjectMode": true,
