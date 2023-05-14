@@ -49,6 +49,8 @@ async function getRecords () {
 async function readRecords () {
   const snapshot = await db.collection('users').get()
   snapshot.forEach(doc => {
-    testNode.innerText = doc.id
+    testNode.innerText = `document data: ${JSON.stringify(doc.data())}`
+    // let user = doc.data()
+    // testNode.innerText += ", " + user.toString()
   })
 }
