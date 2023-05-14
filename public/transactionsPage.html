@@ -1,45 +1,98 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Stress Unit Account</title>
-        <link rel='stylesheet' href='/stylesheets/transactstyle.css'>
-    </head>
-    <body>
-        <h1>My Stress Unit Account</h1>
-        <div class="balance">
-            <p>Available Balance: 20</p>
-        </div>
-        <div class="transaction-history">
-            <h2>Transaction History</h2>
-            <table>
-                <tr>
-                    <th>Date</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                    <th>Balance</th>
-                </tr>
-                <tr>
-                    <td>05/10/2023</td>
-                    <td>Stress Unit Purchase</td>
-                    <td>+50</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td>05/08/2023</td>
-                    <td>Stress Unit Redemption</td>
-                    <td>-10</td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td>05/06/2023</td>
-                    <td>Stress Unit Purchase</td>
-                    <td>+25</td>
-                    <td>35</td>
-                </tr>
-            </table>
-        </div>
-        <div class="account-name">
-            <p>Account: John Doe</p>
-        </div>
-    </body>
+<head>
+	<title>My Stress Unit Account</title>
+	<style type="text/css">
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			padding: 20px;
+			position: relative;
+		}
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+		table {
+			border-collapse: collapse;
+			margin: 50px auto;
+			width: 80%;
+		}
+		th, td {
+			padding: 10px;
+			text-align: left;
+			border: 1px solid #ccc;
+		}
+		th {
+			background-color: #333;
+			color: #fff;
+		}
+		.balance {
+			display: block;
+			margin-bottom: 20px;
+			font-size: 20px;
+			text-align: right;
+		}
+		.transaction-history {
+			margin-top: 50px;
+		}
+		.account-name {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			font-size: 12px;
+			color: #999;
+		}
+	</style>
+</head>
+<body>
+	<h1>My Stress Unit Account</h1>
+	<div class="balance">
+		<p>Available Balance: 20</p>
+	</div>
+	<div class="transaction-history">
+		<h2>Transaction History</h2>
+		<table>
+			<tr>
+				<th>Date</th>
+				<th>Description</th>
+				<th>Amount</th>
+				<th>Balance</th>
+			</tr>
+			<tr>
+				<td>05/10/2023</td>
+				<td>Stress Unit Purchase</td>
+				<td>+50</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td>05/08/2023</td>
+				<td>Stress Unit Redemption</td>
+				<td>-10</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td>05/06/2023</td>
+				<td>Stress Unit Purchase</td>
+				<td>+25</td>
+				<td>35</td>
+			</tr>
+		</table>
+	</div>
+	<div class="account-name">
+		<p>Account: John Doe</p>
+	</div>
+	<div class="transaction-form">
+	<h2>Make a Transaction</h2>
+	<form method="POST" action="/make_transaction">
+		<label for="description">Description:</label><br>
+		<input type="text" id="description" name="description"><br>
+		<label for="amount">Amount:</label><br>
+		<input type="number" id="amount" name="amount"><br>
+		<label for="account_number">Account Number:</label><br>
+		<input type="text" id="account_number" name="account_number"><br><br>
+		<input type="submit" value="Submit">
+	</form>
+	</div>
+</body>
 </html>
